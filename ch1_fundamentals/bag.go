@@ -28,7 +28,6 @@ func (b *Bag) Size() int {
 }
 
 func (b *Bag) Add(item ItemType) {
-
 	var old = b.first
 	b.first = &node{item, old}
 	b.n++
