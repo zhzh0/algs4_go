@@ -47,8 +47,7 @@ func (d *Cycle) dfs(g *Graph, u, v int) {
 	for _, w := range g.Adj(v) {
 		if len(d.cycle) > 0 {
 			return
-		}
-		if !d.marked[w] {
+		} else if !d.marked[w] {
 			d.edgeTo[w] = v
 			d.dfs(g, v, w)
 		} else if w != u {
